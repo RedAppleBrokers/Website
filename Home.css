@@ -1,0 +1,822 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f0f0f0;
+}
+
+header {
+  background: transparent;
+  color: #000;
+  padding: 30px 0;
+  padding-right: 40px;
+  height: 100px;
+}
+
+.main-nav ul{
+  margin-right: 39px;
+  margin-top: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+}
+
+nav ul {
+  list-style: none;
+  float: right;
+  margin-top: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a.btn {
+  background-color: #d90d1c;
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+  color: white;
+}
+
+/*Logo*/
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  z-index: 1000; /* Keeps it above other content */
+
+}
+.logo img{
+  height: 120px;  /* Adjust this size to make the logo smaller */
+  width: auto;   /* Keep the aspect ratio */
+  display: block;
+  padding-top: 0;
+
+}
+
+          /*Home Insurance*/
+.faq-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.faq-container h1 {
+  font-size: 32px;
+  color: #002b45;
+  margin-bottom: 10px;
+}
+
+.intro {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.faq-list .faq-item + .faq-item {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #ddd;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  font-size: 20px;
+  text-align: left;
+  padding: 0;
+  color: #002b45;
+  cursor: pointer;
+  position: relative;
+  padding-right: 25px;
+}
+
+.faq-question::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  font-size: 24px;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.faq-item .faq-question.active::after {
+  transform: rotate(45deg);
+}
+
+.faq-answer p,
+.faq-answer li {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+.faq-answer ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+@media (max-width: 600px) {
+  .faq-container h1 {
+    font-size: 28px;
+  }
+  .faq-question {
+    font-size: 18px;
+  }
+}
+
+
+
+
+
+/*Footer*/
+
+/* Footer base styles */
+footer {
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.site-footer {
+  background-color: #000000;
+  padding: -40px -20px;
+  font-size: 14px;
+  line-height: 1.5;
+  border-top: 4px solid #d90d1c;
+}
+
+/* Flex container for top sections + newsletter */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Footer top now flex container for two columns */
+.footer-top {
+  flex: 1 1 60%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-right: none
+}
+
+/* Each column inside footer-top */
+.footer-column {
+  flex: 1 1 45%;
+  min-width: 200px;
+}
+
+/* Footer links styling */
+.footer-secondary-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 0; /* reset left margin */
+}
+
+.footer-links{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  margin-left: 80px;
+  border-right: 1px solid #004080;
+
+}
+
+.footer-links li,
+.footer-secondary-links li {
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-secondary-links li{
+  margin-bottom: 50px;
+}
+
+.footer-links a{
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer-secondary-links a {
+  color: #ffffff;
+
+}
+.footer-links a:hover,
+.footer-secondary-links a:hover {
+  text-decoration: underline;
+}
+
+/* Social icons */
+.footer-social {
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+  margin-left: 50px;
+  display: none;
+}
+
+.footer-social span {
+  margin-right: 10px;
+}
+
+.social-icon {
+  display: inline-flex;                /* Flex to center the icon */
+  justify-content: center;
+  align-items: center;
+  width: 36px;                         /* Size of the box */
+  height: 36px;
+  background-color: #000000;          /* Blue box */
+  margin-right: 8px;
+  border-radius: 6px;                 /* Optional: round corners */
+  text-decoration: none;
+}
+
+.social-icon svg {
+  width: 23px;                        /* Adjust SVG size */
+  height: 23px;
+  fill: rgb(0, 0, 0);                        /* Makes the icon white inside the blue box */
+}
+
+
+/* Newsletter styling */
+.footer-newsletter {
+  flex: 1 1 35%;
+  margin-bottom: 0;
+}
+
+.footer-newsletter h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-right: 60px;
+}
+
+.footer-newsletter p {
+  margin-bottom: 15px;
+  max-width: 400px;
+}
+
+.footer-newsletter button {
+  background-color: #d90d1c;
+  color: #ffffff;
+  border: none;
+  padding: 10px 25px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-right: 50px;
+}
+
+.footer-newsletter button:hover {
+  background-color: #e05c00;
+}
+
+/* Footer bottom with secondary links and disclaimer */
+.footer-bottom {
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: 700;
+  width: 100%;           /* Make it span full screen */
+  margin-left: calc(-50vw + 50%);  /* Center it correctly */
+  padding: 5px 5px;
+  border-top: 1px solid #ccc;
+}
+
+
+.footer-secondary-links {
+  justify-content: center;
+  border-bottom: 1px solid #ffffff;
+  margin-top: 40px;
+}
+
+.footer-disclaimer {
+  margin: 20px auto 0;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #cccccc;
+  max-width: 800px;
+  text-align: center;
+}
+
+
+/* Responsive: stack footer columns on smaller screens */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-top {
+    flex-direction: column;
+  }
+
+  .footer-column,
+  .footer-newsletter {
+    flex: 1 1 100%;
+    max-width: 400px;
+  }
+
+  .footer-newsletter {
+    margin-top: 30px;
+  }
+
+  .footer-links,
+  .footer-secondary-links {
+    justify-content: center;
+  }
+}
+
+
+
+
+
+/* Hamburger button (top right) */
+.hamburger {
+  display: none;
+  transition: transform 0.3s ease;
+  font-size: 28px;
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  z-index: 2000;
+  color: #000;
+}
+
+.hamburger-up {
+  transform: translateY(-32px); /* Adjust the value to your preference */
+  transition: transform 0.3s ease;
+}
+
+
+/* Dropdown Menu for Mobile */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #d90d1c;
+  position: absolute;
+  top: 70px; /* below header */
+  right: 0;
+  width: 100%;
+  text-align: right;
+  z-index: 1500;
+}
+
+.mobile-menu a {
+  padding: 15px 20px;
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.mobile-menu a:hover {
+  background-color: #d90d1c;
+}
+
+.mobile-menu a:hover,
+.dropdown-btn:hover {
+  background-color: #e6e6e6;
+}
+
+.dropdown-content {
+  display: none;
+  flex-direction: column;
+  background-color: #f0f0f0;
+  padding-left: 10px;
+}
+
+.dropdown.active .dropdown-content {
+  display: flex;
+}
+
+/* Make dropdown button look like the links */
+.dropdown-btn {
+  background: none;
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  text-align: right;
+  width: 100%;
+  font-size: 16px;
+  font-family: inherit;
+  cursor: pointer;
+  border-bottom: 1px solid white;
+}
+
+/* Hover effect matches the links */
+.dropdown-btn:hover {
+  background-color: #d90d1c;
+  color: white;
+}
+
+/* Dropdown content matches submenu style */
+.dropdown-content a {
+  background-color: #d90d1c;
+  color: white;
+  padding: 12px 30px; /* Indented to show it's a sub-item */
+  border-bottom: 1px solid white;
+  text-decoration: none;
+  text-align: right;
+}
+
+.dropdown-content a:hover {
+  background-color: #004d7a;
+}
+/* Show hamburger only on small screens */
+@media screen and (max-width: 1024px) {
+  .phone{
+    display: none; /* hide desktop nav */
+  }
+
+  .hamburger {
+    display: block;
+    top: 0;
+    right: 0;
+    margin-right: 50px;
+    margin-top: 30px;
+  }
+
+  .logo {
+    position: absolute; /* So it's visible in natural flow on mobile */
+    top: 0;
+    left: 0;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  .review-container{
+    margin-left: 2px;
+  }
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+
+  .logo {
+    position: absolute; /* So it's visible in natural flow on mobile */
+    top: 0;
+    left: 0;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  .review-container{
+    margin-left: 2px;
+  }
+
+  .main-nav ul{
+    margin-right: 40px;
+    margin-top: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+  }
+
+  nav ul {
+    list-style: none;
+    float: right;
+    
+  }
+
+
+
+  nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  nav ul li a.btn {
+    background-color: #f7931e;
+    padding: 8px 15px;
+    border-radius: 4px;
+  }
+
+  .top-nav ul {
+    float: right;
+    margin-right: 125px; /* Adjust this to move it left/right */
+    margin-top: -1px;
+  }
+
+
+
+  nav ul {
+    list-style: none;
+    float: right;
+    
+  }
+
+
+
+nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a.btn {
+  background-color: #f7931e;
+  padding: 8px 15px;
+  border-radius: 4px;
+}
+}
+
+
+
+/* Popup Overlay */
+.popup-form {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+/* Popup Content */
+.popup-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+/* Close Button */
+.close-button {
+  color: #aaa;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: #000;
+}
+
+/* Form styling */
+#newsletterForm input[type="text"],
+#newsletterForm input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#newsletterForm button {
+  background-color: #d90d1c;
+  color: white;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#newsletterForm button:hover {
+  background-color: #990000;
+}
+
+
+.contact-container p {
+  margin-bottom: 30px;
+  text-align: center;
+  color: #666;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit{
+  background-color: #f7931e;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact-form button:hover {
+  background-color: #e67e00;
+}
+
+
+
+
+/* Ensure flex containers wrap their items */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Base widths for desktop */
+.col.image, .col.text {
+  flex: 1;
+  min-width: 0;         /* Prevent flex items from overflowing */
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 768px) {
+  .row, .row.reverse {
+    flex-direction: column;
+  }
+  
+  /* Ensure images and text are full-width */
+  .col.image, .col.text {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .col.image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+/* Call to Action */
+.cta-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: transparent;
+    color: white;
+}
+
+.cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #d90d1c;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+
+
+.footer-contact-hours a {
+    color: white;
+}
+
+
+.picture {
+  position: relative;
+  min-height: 65vh;
+  overflow: visible;
+}
+
+/* Background image */
+.picture::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("home.JPG") center / cover no-repeat;
+  opacity: 0;
+  animation: fadeInBg 1.5s ease-in forwards;
+  z-index: 0;
+  filter: brightness();
+}
+
+/* Dark overlay for readability */
+.picture::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+/* Keep all content above image */
+header,
+.cta-section {
+  position: relative;
+  z-index: 2;
+}
+
+/* Text styling */
+.hero h2,
+.hero p {
+  color: #fff;
+}
+
+/* Fade animation */
+@keyframes fadeInBg {
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+/* Landlord insurance intro */
+.insurance-intro {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #fffdbb;
+}
+
+.insurance-intro h2 {
+  font-size: 32px;
+  color: #d90d1c;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.insurance-intro p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Red highlight text */
+.highlight-red {
+  color: #d90d1c;  /* your site’s signature red */
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .insurance-intro h2 {
+    font-size: 26px;
+  }
+  .insurance-intro p {
+    font-size: 16px;
+  }
+}
+
+
+/* Mobile adjustments for footer newsletter */
+@media (max-width: 768px) {
+  .footer-newsletter h4 {
+    margin-right: 24px; /* Optional spacing from edge */
+  }
+
+  .footer-newsletter button {
+    margin-right: 10px; /* Optional spacing from edge */
+  }
+}
